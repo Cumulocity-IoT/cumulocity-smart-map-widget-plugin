@@ -4,7 +4,7 @@
   "description": "The Smart Map widget help you to track real-time device locations in indoor with multi floor infrastructure as well as in outdoor. Smart Map also support real-time Heat map for Indoor and outdoor location events.",
   "scripts": {
     "start": "c8ycli server",
-    "build": "c8ycli build --env.mode=development",
+    "build": "c8ycli build ",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
     "prebuild": " gulp clean",
@@ -71,11 +71,14 @@
       "noAppSwitcher": true,
       "package": "plugin",
       "requiredPlatformVersion": ">=1016.0.0",
+      "icon": {
+        "class": "fa fa-map-marker"
+      },
       "exports": [
         {
           "name": "Smart Map widget plugin",
           "module": "GPSmartMapModule",
-          "path": "./widget/gp-smart-map.module.ts",
+          "path": "./smart-map-widget/gp-smart-map.module.ts",
           "description": "The Smart Map widget help you to track real-time device locations in indoor as well as in outdoor."
         }
       ],
