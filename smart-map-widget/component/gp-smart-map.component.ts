@@ -33,9 +33,7 @@ declare global {
 }
 
 import 'leaflet2/dist/leaflet.js';
-const L: any = window.L;
-import 'leaflet-extra-markers/dist/js/leaflet.extra-markers.js';
-import 'leaflet.markercluster/dist/leaflet.markercluster';
+let L: any = window.L;
 
 import { DeviceMatrix } from '../common/interfaces/devicesMatrix.interface';
 import { TagsEventsMatrix } from '../common/interfaces/tagsEventsMatrix.interface';
@@ -201,7 +199,11 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
     realtime = true;
     isDraggable = false;
     isBusy = false;
-    ngOnInit() {
+    async ngOnInit() {
+       // if(!L.markerClusterGroup || !L.drawVersion) {
+            await import("./gp-leaflet");
+            L  = window.L;
+       // }
         this.appId = this.cmonSvc.getAppId();
         this.reloadMap(true);
     }
@@ -399,8 +401,12 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
         this.fetchTagEvents();
     }
 
-    public ngAfterViewInit(): void {
+    public async ngAfterViewInit() {
         if (isDevMode()) { console.log('+-+- after view init map'); }
+        if(!L.markerClusterGroup || !L.drawVersion) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            this.ngAfterViewInit();
+        }
         if (!this.isIndoor) {
            this.__initMapHandlers();
        }
