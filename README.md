@@ -57,7 +57,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 *  **Smart Configuration:** Simplified configuration options based on map type and also control Indoor Zoom, Outdoor Zoom, Heat intensity and much more during smart map configuration.
 
-*  **[Smart Map Settings](https://github.com/SoftwareAG/cumulocity-smart-map-settings-widget-plugin):** Configure multiple floor plans with live preview using Smart Map Settings widget
+*  **[Smart Map Settings](https://github.com/SoftwareAG/cumulocity-smart-map-settings-widget-plugin):** Configure multiple floor plans with live preview using Smart Map Settings widget.
 
 *  **Follow Device:** Unique Feature to follow/track your single device when device move from one floor to another floor.
 
