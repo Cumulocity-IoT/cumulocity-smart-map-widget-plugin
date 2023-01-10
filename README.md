@@ -83,9 +83,7 @@ This guide will teach you how to add widget in your existing or new dashboard.
 
   
 
-**NOTE:** This guide assumes you have followed the [Installation instructions](#Installation)
 
-  
 
 1. Open you application from App Switcher
 
