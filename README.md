@@ -72,7 +72,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget/releases/download/1.0.0-beta/smartmap-runtime-widget-1.0.0-beta.zip) and install via Administrations(Beta mode) --> Ecosystems --> Applications --> Packages.
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.0-beta/smartmap-runtime-widget-1.0.0-beta.zip) and install via Administrations(Beta mode) --> Ecosystems --> Applications --> Packages.
 
 
 ## QuickStart
