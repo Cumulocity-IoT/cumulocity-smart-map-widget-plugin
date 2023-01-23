@@ -1576,17 +1576,23 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
     protected __updateMapSize(w: number, h: number): void {
         if (w > 0 && h > 0) {
             this.width = w - 20;
-            this.height = h - this.mapInfosDiv.offsetHeight - 10; // 10px from styling :/
+            if (this.mapInfosDiv) {
+                this.height = h - this.mapInfosDiv.offsetHeight - 10; // 10px from styling :/
+            }
         } else {
-            this.width = this.mapDiv.parentElement.offsetWidth - 20;
-            this.height = this.mapDiv.parentElement.offsetHeight - this.mapInfosDiv.offsetHeight - 10; // 10px from styling :/
+            if (this.mapDiv && this.mapInfosDiv) {
+                this.width = this.mapDiv.parentElement.offsetWidth - 20;
+                this.height = this.mapDiv.parentElement.offsetHeight - this.mapInfosDiv.offsetHeight - 10; // 10px from styling :/
+            }
         }
     }
     /**
      * Initialize Leaflet Map handlers
      */
     protected __initMapHandlers(): void {
-        this.map.invalidateSize();
+        if (this.map) {
+            this.map.invalidateSize();
+        }
         this.map.on('click', this.onClickHandler);
         this.map.on('baselayerchange', this.onLayerChangeHandler);
         this.map.on('overlayadd', this.onOverlaySelectHandler);
