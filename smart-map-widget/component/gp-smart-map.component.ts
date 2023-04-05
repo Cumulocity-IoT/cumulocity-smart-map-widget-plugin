@@ -205,6 +205,9 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
             L  = window.L;
        // }
         this.appId = this.cmonSvc.getAppId();
+        if(!L.imageOverlay){
+            await new Promise(resolve => setTimeout(resolve, 500));
+        } 
         this.reloadMap(true);
     }
     refresh() {
