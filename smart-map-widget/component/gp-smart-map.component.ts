@@ -1592,10 +1592,11 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
     protected __initMapHandlers(): void {
         if (this.map) {
             this.map.invalidateSize();
+            this.map.on('click', this.onClickHandler);
+            this.map.on('baselayerchange', this.onLayerChangeHandler);
+            this.map.on('overlayadd', this.onOverlaySelectHandler);
         }
-        this.map.on('click', this.onClickHandler);
-        this.map.on('baselayerchange', this.onLayerChangeHandler);
-        this.map.on('overlayadd', this.onOverlaySelectHandler);
+        
         this.movingMarkerService.initializeMovingMarker(L);
         if (this.isHeatMap) {
             this.heatLayerService.initHeatLayer(L);
