@@ -3,17 +3,18 @@
   "version": "1.0.1",
   "description": "The Smart Map widget help you to track real-time device locations in indoor with multi floor infrastructure as well as in outdoor. Smart Map also support real-time Heat map for Indoor and outdoor location events.",
   "scripts": {
-    "start": "c8ycli server -u",
-    "build": "c8ycli build --env.mode=production",
+    "start": "c8ycli server",
+    "build": "c8ycli build",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
     "prebuild": " gulp clean",
     "postbuild": " gulp bundle"
   },
-  "keywords": [ 
+  "keywords": [
     "Cumulocity",
     "Plugin",
-    "Widget"],
+    "Widget"
+  ],
   "author": "Darpankumar Lalani - Software AG, Global Presales ",
   "license": "Apache 2.0",
   "dependencies": {
@@ -89,8 +90,19 @@
         "widget-plugin": [
           "GPSmartMapModule"
         ]
+      },
+    
+    "copy": [
+      {
+        "from": "images/UserImage.png",
+        "to": "images/UserImage.png"
+      },
+      {
+        "from": "LICENSE",
+        "to": "LICENSE.txt"
       }
-    },
+    ]
+  },
     "cli": {}
   },
   "browserslist": [
