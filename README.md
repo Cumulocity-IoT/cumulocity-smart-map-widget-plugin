@@ -15,9 +15,11 @@ The Smart Map widget help you to track real-time device locations in indoor with
 | 2.x.x(coming soon) | >= 1016.x.x| 1.x.x            | 
 
   
-![Images](images/UserImage.png)
+
+![](https://user-images.githubusercontent.com/32765455/94537868-f5452f00-0260-11eb-830e-e103546d9567.png)
 
     
+
 ## What's new?
 
 *  **Asset Hierarchy/DTM:** Now Smart Map support up to three level of asset hierarchy to display assets and devices on the Map.
