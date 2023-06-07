@@ -1,5 +1,5 @@
 
-# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smartmap-runtime-widget-1.0.1.zip)
+# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.2/sag-ps-pkg-smartmap-runtime-widget-1.0.2.zip)
 
   
 
@@ -69,7 +69,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smartmap-runtime-widget-1.0.1.zip) and install via Administrations --> Ecosystems --> Applications --> Packages.
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.2/sag-ps-pkg-smartmap-runtime-widget-1.0.2.zip) and install via Administrations --> Ecosystems --> Applications --> Packages.
 
 
 ## QuickStart
