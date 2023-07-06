@@ -94,8 +94,8 @@
     
     "copy": [
       {
-        "from": "images/UserImage.png",
-        "to": "images/UserImage.png"
+        "from": "images/userImage.png",
+        "to": "images/userImage.png"
       },
       {
         "from": "LICENSE",

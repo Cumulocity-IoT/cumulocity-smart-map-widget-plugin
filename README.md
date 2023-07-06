@@ -15,7 +15,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 | 2.x.x(coming soon) | >= 1016.x.x| 1.x.x            | 
 
   
-![Images](images/UserImage.png)
+![Images](images/userImage.png)
 
     
 ## What's new?
