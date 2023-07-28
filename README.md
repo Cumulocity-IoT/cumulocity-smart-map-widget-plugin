@@ -1,5 +1,5 @@
 
-# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smartmap-runtime-widget-1.0.1.zip)
+# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.2/sag-ps-pkg-smartmap-runtime-widget-1.0.2.zip)
 
   
 
@@ -12,14 +12,12 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 |APPLICATION BUILDER | CUMULOCITY | SMART MAP WIDGET |
 |--------------------|------------|------------------|
-| 2.x.x(coming soon) | >= 1016.x.x| 1.x.x            | 
+| 2.x.x              | >= 1016.x.x| 1.x.x            | 
 
   
-
-![](https://user-images.githubusercontent.com/32765455/94537868-f5452f00-0260-11eb-830e-e103546d9567.png)
+![Images](images/userImage.png)
 
     
-
 ## What's new?
 
 *  **Asset Hierarchy/DTM:** Now Smart Map support up to three level of asset hierarchy to display assets and devices on the Map.
@@ -71,7 +69,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smartmap-runtime-widget-1.0.1.zip) and install via Administrations --> Ecosystems --> Applications --> Packages.
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.2/sag-ps-pkg-smartmap-runtime-widget-1.0.2.zip) and install via Administrations --> Ecosystems --> Applications --> Packages.
 
 
 ## QuickStart

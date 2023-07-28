@@ -205,10 +205,18 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
             L  = window.L;
        // }
         this.appId = this.cmonSvc.getAppId();
-        if(!L.imageOverlay){
-            await new Promise(resolve => setTimeout(resolve, 500));
-        } 
-        this.reloadMap(true);
+        await this.waitToLoadLeafletPlugin(true);
+        
+    }
+
+    private async waitToLoadLeafletPlugin(isFirstCall) {
+        if(!L.imageOverlay ||  !L.markerClusterGroup || !L.drawVersion || !L.imageOverlay.rotated){
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            await this.waitToLoadLeafletPlugin(isFirstCall);
+        } else {
+            this.reloadMap(isFirstCall);
+        }
+       
     }
     refresh() {
         this.reloadMap(false);
@@ -406,7 +414,7 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
 
     public async ngAfterViewInit() {
         if (isDevMode()) { console.log('+-+- after view init map'); }
-        if(!L.markerClusterGroup || !L.drawVersion) {
+        if(!L.markerClusterGroup || !L.drawVersion || !L.imageOverlay.rotated) {
             await new Promise(resolve => setTimeout(resolve, 1000));
             this.ngAfterViewInit();
         }
