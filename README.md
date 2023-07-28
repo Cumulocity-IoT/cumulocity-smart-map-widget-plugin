@@ -10,7 +10,7 @@ The Smart Map widget help you to track real-time device locations in indoor with
 
 ### Please choose Smart Map release based on Cumulocity/Application builder version:
 
-|APPLICATION BUILDER | CUMULOCITY | SMART MAP WIDGET |
+|APPLICATION BUILDER&nbsp;|&nbsp;CUMULOCITY&nbsp;|&nbsp;SMART MAP WIDGET&nbsp;|
 |--------------------|------------|------------------|
 | 2.x.x              | >= 1016.x.x| 1.x.x            | 
 
