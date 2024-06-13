@@ -1,5 +1,5 @@
 
-# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.2/sag-ps-pkg-smartmap-runtime-widget-1.0.2.zip)
+# Smart Map Widget for Cumulocity [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-map-widget-plugin/releases/download/1.0.3/sag-ps-pkg-smartmap-runtime-widget-1.0.3.zip)
 
   
 
@@ -251,6 +251,8 @@ Congratulations! Smart Map is configured.
 
   
 *  **Heat Map Last Event Only:** Switch on to display map based on last location event.  As soon as new event comes for same device, existing event location will be removed from map.
+
+*  **Simulate Indoor Beacons:** If true, hybrid map will switch to indoor based on last event of Indoor tracker(If last event recieved withing 30 seconds) else it will switch to outdoor map. Useful for Beacons simulation. Applicable on Hybrid map only. Default is false.
 
 
 *  **Default Zoom:** User has ability to change outdoor zoom level. Default is Auto.
