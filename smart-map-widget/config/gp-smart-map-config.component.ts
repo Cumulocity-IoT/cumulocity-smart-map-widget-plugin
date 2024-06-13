@@ -89,6 +89,10 @@ export class GPSmartMapConfigComponent implements OnInit, OnDestroy, DoCheck {
     if (this.config.isLastEventHeatmap === undefined) {
       this.config.isLastEventHeatmap = true;
     }
+
+    if (this.config.simulateIndoorBeacon === undefined) {
+      this.config.simulateIndoorBeacon = false;
+    }
     if (!this.config.heatMapLegendLow) {
       this.config.heatMapLegendLow = 'Low';
     }

@@ -188,7 +188,7 @@
     </div>
 
     <div class="row col-sm-12 col-xs-12">
-      <div class="col-sm-12 col-xs-12form-horizontal">
+      <div class="col-sm-12 col-xs-12 form-horizontal">
           <div class="col-sm-12 col-xs-12">
             <div class="btn-group ">
               <label class="c8y-switch ">
@@ -205,6 +205,15 @@
                   [(ngModel)]="config.isLastEventHeatmap" [disabled]='config.mapType !== "InDoorHeatMap" && config.mapType
                   !== "HeatMap"'>
                   <span></span>Heat Map - Last Event Only
+                </label>
+             </div>
+          </div>
+          <div class="col-sm-12 col-xs-12">
+            <div class="btn-group ">
+              <label class="c8y-switch ">
+                  <input type="checkbox" [checked]="config.simulateIndoorBeacon" 
+                  [(ngModel)]="config.simulateIndoorBeacon" [disabled]='config.mapType !== "Hybrid"'>
+                  <span></span>Simulate Indoor Beacons
                 </label>
              </div>
           </div>

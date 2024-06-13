@@ -75,6 +75,7 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
     isHeatMap = false;
     isClusterMap = false;
     loadChildDevices = true;
+    simulateIndoorBeacon = false;
     isMarkerIconFromAssetType = false;
     markerIcon = '';
     iconColor = '';
@@ -337,7 +338,10 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
             if (this._config.eventFragmentType !== null && this._config.eventFragmentType !== undefined) {
                 this.eventFragmentType = this._config.eventFragmentType;
             }
-           
+            if (this._config.simulateIndoorBeacon !== null && this._config.simulateIndoorBeacon !== undefined) {
+                this.simulateIndoorBeacon = this._config.simulateIndoorBeacon;
+            }
+            
 
         }
 
@@ -1999,7 +2003,9 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
                 console.log(' last tag avg time = ', tag.eventAvgTime);
                 console.log('last event time difference =' + timeDiff);
             }
-            if (timeDiff < (tag.eventAvgTime * 2)) {
+            //if (timeDiff < (tag.eventAvgTime * 2)) {
+
+            if ( (this.simulateIndoorBeacon && timeDiff < 30) || (!this.simulateIndoorBeacon && timeDiff < (tag.eventAvgTime * 2))) {
                 this.renderAndSubscribeDevice('GPS', true, tag.deviceId);
             } else if (this.isBeaconActive !== null) {
                 this.renderAndSubscribeDevice('Tag', false, tag.deviceId);
@@ -2133,7 +2139,7 @@ export class GPSmartMapComponent implements OnInit, OnDestroy, AfterViewInit, On
                 if (s.type === type) {
                     if (isDevMode()) { console.log('+-+- UNSUBSCRIBING FOR ', s.id); }
                    // s.subs.unsubscribe();
-                    this.realTimeService.unsubscribe(s.sub);
+                    this.realTimeService.unsubscribe(s?.subs);
                     delete this.allSubscriptions[s];
                 }
             });
